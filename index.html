@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Reseller Training Dashboard</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#0b1220,#1a2448);color:#fff}
+nav{background:rgba(0,0,0,.3);padding:15px;backdrop-filter:blur(10px)}
+nav a{color:#fff;margin-right:15px;text-decoration:none;font-weight:bold}
+.container{padding:30px}
+.card{background:rgba(255,255,255,.1);padding:20px;border-radius:16px;margin-bottom:20px;backdrop-filter:blur(12px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.progress{background:#222;border-radius:20px;height:12px;margin-top:10px}
+.progress-bar{background:#3b82f6;height:12px;border-radius:20px;width:60%}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Dashboard</a>
+<a href="training.html">Training Modules</a>
+<a href="assessment.html">Assessment</a>
+<a href="admin.html">Admin Panel</a>
+<a href="reseller-data.html">Admin Reseller Input</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h2>Welcome Reseller</h2>
+<p>Your training progress</p>
+<div class="progress"><div class="progress-bar"></div></div>
+</div>
+
+<div class="grid">
+<div class="card"><h3>Assigned Trainings</h3><p>4 Modules</p></div>
+<div class="card"><h3>Upcoming Webinar</h3><p>Saturday 7PM</p></div>
+<div class="card"><h3>Checklist</h3><p>3 tasks remaining</p></div>
+</div>
+
+</div>
+
+</body>
+</html>
