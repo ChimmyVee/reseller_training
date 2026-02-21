@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Training Analytics</title>
+<title>Training Analytics Pro</title>
 
 <style>
 body{margin:0;font-family:Arial;background:linear-gradient(135deg,#0b1220,#1a2448);color:#fff}
@@ -10,12 +10,45 @@ nav{background:#111a33;padding:15px}
 nav a{color:#fff;margin-right:15px;text-decoration:none}
 
 .container{padding:30px}
-.card{background:rgba(255,255,255,.08);padding:20px;border-radius:16px;margin-bottom:20px}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{
+background:rgba(255,255,255,.08);
+padding:20px;
+border-radius:16px;
+margin-bottom:20px;
+backdrop-filter:blur(12px);
+}
 
-.progress{background:#222;border-radius:20px;height:12px;margin-top:10px}
-.progress-bar{background:#3b82f6;height:12px;border-radius:20px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.progress{
+background:#222;
+border-radius:20px;
+height:12px;
+margin-top:10px;
+}
+
+.progress-bar{
+background:linear-gradient(90deg,#3b82f6,#22c55e);
+height:12px;
+border-radius:20px;
+}
+
+.heat{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:8px;
+}
+
+.heat div{
+padding:20px;
+border-radius:8px;
+text-align:center;
+}
 
 .btn{padding:8px 16px;background:#3b82f6;border-radius:8px;color:#fff;text-decoration:none}
 </style>
@@ -34,38 +67,54 @@ nav a{color:#fff;margin-right:15px;text-decoration:none}
 
 <div class="container">
 
-<!-- KPI BOXES -->
+<!-- KPI -->
 <div class="grid">
 <div class="card"><h3>Total Resellers</h3><h2>12</h2></div>
 <div class="card"><h3>Completed Training</h3><h2>7</h2></div>
-<div class="card"><h3>In Progress</h3><h2>4</h2></div>
+<div class="card"><h3>Engagement Score</h3><h2>82%</h2></div>
 <div class="card"><h3>Failed Assessment</h3><h2>1</h2></div>
 </div>
 
-<!-- PROGRESS PER RESELLER -->
+<!-- PROGRESS -->
 <div class="card">
-<h2>Reseller Training Progress</h2>
-
-<p>Juan D.</p>
-<div class="progress"><div class="progress-bar" style="width:80%"></div></div>
-
-<p>Maria L.</p>
+<h2>Course Completion</h2>
+<p>Juan</p>
+<div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+<p>Maria</p>
 <div class="progress"><div class="progress-bar" style="width:60%"></div></div>
-
-<p>Alex P.</p>
+<p>Alex</p>
 <div class="progress"><div class="progress-bar" style="width:20%"></div></div>
-
 </div>
 
-<!-- FAILED LIST -->
+<!-- HEATMAP -->
 <div class="card">
-<h2>Failed Assessment</h2>
-<p>Alex P. — Needs to review Marketing Basics</p>
+<h2>Training Heatmap</h2>
+<div class="heat">
+<div style="background:#22c55e">Intro</div>
+<div style="background:#facc15">Product</div>
+<div style="background:#f97316">Marketing</div>
+<div style="background:#ef4444">Facebook Ads</div>
+</div>
 </div>
 
-<!-- EXPORT BUTTON -->
+<!-- SKILL GAP -->
 <div class="card">
-<a class="btn">Download CSV Report</a>
+<h2>Skill Gap Analytics</h2>
+<p>⚠ Marketing weakness detected</p>
+<p>⚠ Facebook Ads knowledge low</p>
+</div>
+
+<!-- LEADERBOARD -->
+<div class="card">
+<h2>Top Reseller Leaderboard</h2>
+<p>🥇 Juan — 90%</p>
+<p>🥈 Maria — 80%</p>
+<p>🥉 Alex — 60%</p>
+</div>
+
+<!-- EXPORT -->
+<div class="card">
+<a class="btn">Download Analytics CSV</a>
 </div>
 
 </div>
