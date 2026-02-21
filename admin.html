@@ -2,29 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Dashboard</title>
+<title>Admin Training Panel</title>
 <style>
 body{margin:0;font-family:Arial;background:#0b1220;color:#fff}
 nav{background:#111a33;padding:15px}
 nav a{color:#fff;margin-right:15px;text-decoration:none}
 .card{background:#111a33;padding:20px;border-radius:12px;margin:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 </style>
 </head>
 
 <body>
 
 <nav>
-<a href="index.html">Dashboard</a>
-<a href="training.html">Training Modules</a>
-<a href="assessment.html">Assessment</a>
-<a href="admin.html">Admin Panel</a>
-<a href="reseller-data.html">Admin Reseller Input</a>
+<b>ADMIN PANEL</b><br><br>
+<a href="admin.html">Dashboard</a>
+<a href="reseller-data.html">Add Reseller</a>
+<a href="assign.html">Assign Training</a>
+<hr>
+<a href="index.html">Switch to Reseller</a>
 </nav>
 
 <div class="card">
 <h2>Training Progress Overview</h2>
-<p>Reseller 1 — 80%</p>
-<p>Reseller 2 — 60%</p>
+<div class="grid">
+<div class="card">Reseller A — 80%</div>
+<div class="card">Reseller B — 60%</div>
+<div class="card">Reseller C — 20%</div>
+</div>
 </div>
 
 </body>
