@@ -2,13 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Training Panel</title>
+<title>Training Analytics</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#0b1220;color:#fff}
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#0b1220,#1a2448);color:#fff}
 nav{background:#111a33;padding:15px}
 nav a{color:#fff;margin-right:15px;text-decoration:none}
-.card{background:#111a33;padding:20px;border-radius:12px;margin:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+
+.container{padding:30px}
+.card{background:rgba(255,255,255,.08);padding:20px;border-radius:16px;margin-bottom:20px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+
+.progress{background:#222;border-radius:20px;height:12px;margin-top:10px}
+.progress-bar{background:#3b82f6;height:12px;border-radius:20px}
+
+.btn{padding:8px 16px;background:#3b82f6;border-radius:8px;color:#fff;text-decoration:none}
 </style>
 </head>
 
@@ -16,20 +25,49 @@ nav a{color:#fff;margin-right:15px;text-decoration:none}
 
 <nav>
 <b>ADMIN PANEL</b><br><br>
-<a href="admin.html">Dashboard</a>
+<a href="admin.html">Training Analytics</a>
 <a href="reseller-data.html">Add Reseller</a>
 <a href="assign.html">Assign Training</a>
 <hr>
 <a href="index.html">Switch to Reseller</a>
 </nav>
 
-<div class="card">
-<h2>Training Progress Overview</h2>
+<div class="container">
+
+<!-- KPI BOXES -->
 <div class="grid">
-<div class="card">Reseller A — 80%</div>
-<div class="card">Reseller B — 60%</div>
-<div class="card">Reseller C — 20%</div>
+<div class="card"><h3>Total Resellers</h3><h2>12</h2></div>
+<div class="card"><h3>Completed Training</h3><h2>7</h2></div>
+<div class="card"><h3>In Progress</h3><h2>4</h2></div>
+<div class="card"><h3>Failed Assessment</h3><h2>1</h2></div>
 </div>
+
+<!-- PROGRESS PER RESELLER -->
+<div class="card">
+<h2>Reseller Training Progress</h2>
+
+<p>Juan D.</p>
+<div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+
+<p>Maria L.</p>
+<div class="progress"><div class="progress-bar" style="width:60%"></div></div>
+
+<p>Alex P.</p>
+<div class="progress"><div class="progress-bar" style="width:20%"></div></div>
+
+</div>
+
+<!-- FAILED LIST -->
+<div class="card">
+<h2>Failed Assessment</h2>
+<p>Alex P. — Needs to review Marketing Basics</p>
+</div>
+
+<!-- EXPORT BUTTON -->
+<div class="card">
+<a class="btn">Download CSV Report</a>
+</div>
+
 </div>
 
 </body>
